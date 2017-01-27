@@ -8,7 +8,7 @@ This repository hosts level sets created by the community.  These levels are acc
 2. Create your level file as a simple text file using the lvl file extension.
 3. See Object Legend for adding gaming content, adding items from this legend.
 4. Use walls to prevent the wrapping feature in the game (otherwise the character will wrap back to the opposite side).
-5. Create a level description file (see the Classic file for details), currently this simply orders the game list in the UI.
+5. Create a level description file (see the [Classic level configuration](https://github.com/travislondon/iLadder/blob/master/Levels/Classic/Classic.cfg) for details), currently this simply orders the game list in the UI.
 6. In the iLevel application go to the Get New Levels page, from there navigate to your created level set and choose Get.
 7. Begin enjoying playing your new levels :), and sharing them with the community.
 
