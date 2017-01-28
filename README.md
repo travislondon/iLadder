@@ -9,6 +9,7 @@ This repository hosts level sets created by the community.  These levels are acc
 3. See [Object Legend](https://github.com/travislondon/iLadder/blob/master/Game/ObjectLegend.md) for adding gaming content, adding items from this legend.
 4. Use walls to prevent the wrapping feature in the game (otherwise the character will wrap back to the opposite side).
 5. Create a level description file (see the [Classic level configuration](https://github.com/travislondon/iLadder/blob/master/Levels/Classic/Classic.cfg) for details), currently this specifies the order of levels in the game.
+6. Add a Level Set: <path to level> entry in the [root configuration](https://github.com/travislondon/iLadder/blob/master/LevelConfiguration.cfg) file.
 6. In the iLevel application go to the Get New Levels page, from there navigate to your created level set and choose Get.
 7. Begin enjoying playing your new levels :), and sharing them with the community.
 
