@@ -3,7 +3,7 @@ iLadder Object Legend
 * i - Agent, the main character controlled by the user
 * ! - Enemy, enemies created during level play
 * + - Enemy base, starting point for enemies
-* * - POW Camp, enemies are captured and never release here
+* * - POW Camp, enemies are captured and never released here
 * % - Point boosts, gives bonus points when collected
 * D - Director office, end of the level
 * 0 - Portal, go in one and out another (unssported currently)
