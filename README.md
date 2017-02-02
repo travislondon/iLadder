@@ -15,9 +15,12 @@ This repository hosts level sets created by the community.  These levels are acc
 5. Use walls to prevent the wrapping feature in the game (otherwise the character will wrap back to the opposite side).
 6. Create a level description file (see the [Classic level configuration](https://github.com/travislondon/iLadder/blob/master/Levels/Classic/Classic.cfg) for details), currently this specifies the order of levels in the game.
 7. Add a Level Set: <path to level> entry in the [root configuration](https://github.com/travislondon/iLadder/blob/master/LevelConfiguration.cfg) file.
-8. In the iLevel application go to the Get New Levels page, from there navigate to your created level set and choose Get.
-9. Commit and create a pull request for review.
-10. As long as there is nothing obscene (including ascii pictures) the levels will be promoted.
-11. Begin enjoying playing your new levels :), and sharing them with the community.
+8. Create a pull request for addition to the game
+  - Under the repository select the Pull Request tab
+  - Click the New pull request button
+  - For the base use <branch_name>, for the destination use master
+  - Click the Create pull request button
+9. As long as there is nothing obscene (including ascii pictures) the levels will be promoted.
+10. Begin enjoying playing your new levels :), and sharing them with the community.  (Note there is a small delay for online content to become available once promoted)
 
 As the application progresses expect more support for level descriptions, including things like marking the "Agent" with a different character.
