@@ -18,9 +18,9 @@ This repository hosts level sets created by the community.  These levels are acc
 8. Create a pull request for addition to the game
   - Under the repository select the Pull Request tab
   - Click the New pull request button
-  - For the first branch to compare with use master, for the second one use <branch_name>
+  - For the base use <branch_name>, for the destination use master
   - Click the Create pull request button
 9. As long as there is nothing obscene (including ascii pictures) the levels will be promoted.
-10. Begin enjoying playing your new levels :), and sharing them with the community.
+10. Begin enjoying playing your new levels :), and sharing them with the community.  (Note there is a small delay for online content to become available once promoted)
 
 As the application progresses expect more support for level descriptions, including things like marking the "Agent" with a different character.
