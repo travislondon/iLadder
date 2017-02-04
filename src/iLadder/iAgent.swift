@@ -79,6 +79,14 @@ public class iAgent : iMovableCharacter {
                 jumping = true
             }
             break
+        case TouchEvent.STOP:
+            direction = Direction.None
+            moving = false
+            downOnNextChance = false
+            upOnNextChance = false
+            jumping = false
+            jumps = 0
+            break
         default:
             break
         }

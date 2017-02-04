@@ -38,10 +38,7 @@ public class iLevel {
         self.contents = contents
         self.originalContents = contents
         environment.setLevel(level: self)
-        var fontSize = 12
-        if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad {
-            fontSize = 23
-        }
+        let fontSize = 12
         let font = UIFont.init(name:"Menlo", size:CGFloat(fontSize))!
         fontAttributes = [NSFontAttributeName: (font)]
         let myText = "H"

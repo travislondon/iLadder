@@ -191,6 +191,10 @@ public class Environment {
                 return
             }
         }
+        if(nextCharacter is iFloor) {
+            character.location = character.previousLocation
+            return
+        }
         // stop at edges
         if(character.location.x < 0) {
             character.location = character.previousLocation

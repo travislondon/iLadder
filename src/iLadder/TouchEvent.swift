@@ -12,6 +12,7 @@ public class TouchEvent {
     static let UP = 2
     static let DOWN = 3
     static let JUMP = 4
+    static let STOP = 5
     
     init(type : Int) {
         self.type = type

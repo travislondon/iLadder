@@ -40,8 +40,8 @@ public class TitleScreenController : UIViewController {
         skView.presentScene(scene)
         
         skView.ignoresSiblingOrder = true
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        skView.showsFPS = false
+        skView.showsNodeCount = false
         
         // initialize level sets, only initialize once
         if(iLevelSet.levelSets.isEmpty) {

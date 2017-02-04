@@ -14,34 +14,7 @@ public class GameViewController: UIViewController {
     
     var game : Game?
     
-    @IBOutlet weak var upButton: UIButton!
-    @IBOutlet weak var leftButton: UIButton!
-    @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var livesLabel: UILabel!
-    
-    
-    
-    @IBAction func handleJumpPressed(_ sender: Any) {
-        let event = TouchEvent(type: TouchEvent.JUMP)
-        game?.handleEvent(event: event)
-    }
-    @IBAction func handleUpButtonPressed(_ sender: Any) {
-        let event = TouchEvent(type: TouchEvent.UP)
-        game?.handleEvent(event: event)
-    }
-    @IBAction func handleLeftButtonPressed(_ sender: Any) {
-        let event = TouchEvent(type: TouchEvent.LEFT)
-        game?.handleEvent(event: event)
-    }
-    @IBAction func handleRightButtonPressed(_ sender: Any) {
-        let event = TouchEvent(type: TouchEvent.RIGHT)
-        game?.handleEvent(event: event)
-    }
-    @IBAction func handleDownButtonPressed(_ sender: Any) {
-        let event = TouchEvent(type: TouchEvent.DOWN)
-        game?.handleEvent(event: event)
-    }
     
     public func setGame(game: Game) {
         self.game = game
@@ -57,8 +30,8 @@ public class GameViewController: UIViewController {
         skView.presentScene(scene)
         
         skView.ignoresSiblingOrder = true
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        skView.showsFPS = false
+        skView.showsNodeCount = false
         
         // configure the game view area
         let gameView = self.view.viewWithTag(3) as? GameView
@@ -85,6 +58,61 @@ public class GameViewController: UIViewController {
     
     override public func viewDidDisappear(_ animated: Bool) {
         game!.gameOver()
+    }
+    
+    var touchStart = CGPoint(x:0, y:0)
+    var touchDate : Date?
+    
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touchStart = (touches.first?.location(in: view))!
+        touchDate = Date()
+    }
+    
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touchEnd = touches.first?.location(in: view)
+        if(touchStart == touchEnd) {
+            // if the duration is longer than 1 second, generate
+            // a stop
+            let duration = NSDate().timeIntervalSince(touchDate! as Date)
+            if(duration > 0.5) {
+                let event = TouchEvent(type: TouchEvent.STOP)
+                self.game?.handleEvent(event: event)
+            } else {
+                // generate a press, causing a jump
+                let event = TouchEvent(type: TouchEvent.JUMP)
+                self.game?.handleEvent(event: event)
+            }
+        } else {
+            // determine move direction and generate appropriate
+            // event
+            let xChange = touchStart.x - (touchEnd?.x)!
+            let yChange = touchStart.y - (touchEnd?.y)!
+            if(abs(xChange) > abs(yChange)) {
+                // we have a horizontal move
+                // either left or right event
+                if(xChange < 0) {
+                    // moving right
+                    let event = TouchEvent(type: TouchEvent.RIGHT)
+                    self.game?.handleEvent(event: event)
+                } else {
+                    // moving left
+                    let event = TouchEvent(type: TouchEvent.LEFT)
+                    self.game?.handleEvent(event: event)
+                }
+            } else {
+                // we have a vertical move
+                // either up or down
+                if(yChange < 0) {
+                    // moving down
+                    let event = TouchEvent(type: TouchEvent.DOWN)
+                    self.game?.handleEvent(event: event)
+                } else {
+                    // moving up
+                    let event = TouchEvent(type: TouchEvent.UP)
+                    self.game?.handleEvent(event: event)
+                }
+            }
+        }
     }
     
 }

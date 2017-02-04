@@ -24,10 +24,6 @@ public class iEnemy : iMovableCharacter {
         requiresPaint = true
         moving = true
         
-        let nextCharacter = level?.characterAt(x: location.x, y: location.y + 1)
-        if(nextCharacter == nil) {
-            self.die()
-        }
         let randomNumber = Double.random(lower: Double(1), upper: Double(100))
         // make a random decision at each obstacle
         // currently everything but whitespace is
