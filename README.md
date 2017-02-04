@@ -12,7 +12,7 @@ This repository hosts level sets created by the community.  These levels are acc
 2. Create your file structure.  For example: Levels/ReallyAwesomeLevels/Level One... Level Two.  Note that all level sets must start under the root Levels folder.
 3. Create your level file as a simple text file using the lvl file extension.
 4. See [Object Legend](https://github.com/travislondon/iLadder/blob/master/Game/ObjectLegend.md) for adding gaming content, adding items from this legend.
-5. See https://github.com/travislondon/iLadder/Levels/Community/Sample-iphone6.lvl (or others) for hints on available real estate for levels
+5. See https://github.com/travislondon/iLadder/blob/master/Levels/Community/Sample-iphone6.lvl (or others) for hints on available real estate for levels
 6. Create a level description file (see the [Classic level configuration](https://github.com/travislondon/iLadder/blob/master/Levels/Classic/Classic.cfg) for details), currently this specifies the order of levels in the game.
 7. Add a Level Set: <path to level> entry in the [root configuration](https://github.com/travislondon/iLadder/blob/master/LevelConfiguration.cfg) file.
 8. Create a pull request for addition to the game
