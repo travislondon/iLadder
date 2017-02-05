@@ -65,9 +65,7 @@ public class iMovableCharacter : iInteractiveCharacter, Hashable {
     }
     
     override public func draw(rect: CGRect) {
-        // paint self
-        let string = NSString.init(string: String(costume))
-        string.draw(at: CGPoint(x: CGFloat(location.x) * (level?.letterWidth)!, y: CGFloat(location.y) * (level?.letterHeight)!), withAttributes: level?.fontAttributes)
+        super.draw(rect: rect)
     }
     
     public static func ==(lhs: iMovableCharacter, rhs: iMovableCharacter) -> Bool {

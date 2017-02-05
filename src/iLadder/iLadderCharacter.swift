@@ -40,6 +40,9 @@ public class iLadderCharacter : iPaintable {
     }
     
     public func draw(rect: CGRect) {
+        // paint self
+        let string = NSString.init(string: String(costume))
+        string.draw(at: CGPoint(x: CGFloat(location.x) * (level?.letterWidth)!, y: CGFloat(location.y) * (level?.letterHeight)!), withAttributes: level?.fontAttributes)
     }
     
     public func handleEvent(event: TouchEvent, sender: iLevel) {

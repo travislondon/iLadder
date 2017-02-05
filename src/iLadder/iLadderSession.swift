@@ -21,7 +21,7 @@ public class iLadderSession : Game {
     private var paused = true
     public var over = false
     public var controller : GameViewController?
-    public var mutex = PThreadMutex.init(type: PThreadMutex.PThreadMutexType.normal)
+    public var lock = UnfairLock.init()
     
     override init(name : String, view : UIView) {
         super.init(name: name, view: view)
@@ -42,16 +42,16 @@ public class iLadderSession : Game {
             // we must lock updating
             // to prevent processing before
             // a last update was made
-            mutex.sync(execute: {
+            lock.sync(execute: {
                 currentLevel?.startEnemyCreation()
                 currentLevel?.update()
             })
-            repaint()
-            usleep(1800)
+            repaint(useLock: true)
+            Thread.sleep(forTimeInterval: 0.002)
         }
     }
     
-    func repaint() {
+    func repaint(useLock: Bool) {
         DispatchQueue.main.async {
             self.updateLifeLabel()
             self.view?.setNeedsDisplay()
@@ -131,7 +131,7 @@ public class iLadderSession : Game {
     }
     
     override public func handleEvent(event: TouchEvent) {
-        mutex.sync(execute: {currentLevel?.handleEvent(event: event)})
+        lock.sync(execute: {currentLevel?.handleEvent(event: event)})
     }
     
 }

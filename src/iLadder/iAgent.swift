@@ -112,7 +112,7 @@ public class iAgent : iMovableCharacter {
         let chars = [" ", "o", "O", "0", "o", "O", "0","o", "O", "0","o", "O", "0"]
         for char in chars {
             self.costume = Character(char)
-            self.level?.repaint()
+            self.level?.repaint(lock: false)
             usleep(100000)
         }
         level?.finished()
@@ -126,8 +126,8 @@ public class iAgent : iMovableCharacter {
         let chars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "x"]
         for char in chars {
             self.costume = Character(char)
-            self.level?.repaint()
             usleep(100000)
+            self.level?.repaint(lock: false)
         }
         if(level?.session?.lives == 0) {
             level?.session?.endSession()

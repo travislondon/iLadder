@@ -112,11 +112,13 @@ public class Environment {
                 if(level?.floorLevels.contains(Int(character.location.y)))! {
                    //character.direction = Direction.Down
                 }
-                // update previousLocation
-                character.previousLocation.y += 0.5
                 character.location.y += 0.5
                 // check obstacles, in the down direction if moving
                 if(character.moving) {
+                    nextCharacter = level?.characterAt(x: round(character.location.x), y: round(character.location.y))
+                    if(!(nextCharacter is iFloor)) {
+                        nextCharacter = level?.characterAt(x: floor(character.location.x), y: floor(character.location.y))
+                    }
                     checkObstacles(character: character, nextCharacter: nextCharacter)
                 }
             }
@@ -132,23 +134,27 @@ public class Environment {
     
     func checkObstacles(character: iMovableCharacter, nextCharacter: iLadderCharacter?) {
         for movable in characters {
-            if(movable is iAgent && character is iEnemy) {
-                if(movable.location.x == character.location.x && movable.location.y == character.location.y) {
-                    movable.die()
-                    return
-                }
-            }
             if(movable is iEnemy && character is iAgent) {
-                if(movable.location.x == character.location.x && movable.location.y == character.location.y) {
-                    character.die()
-                    return
+                if(movable.direction == Direction.Right || movable.direction == Direction.Down) {
+                    if(round(movable.location.x) == round(character.location.x) && round(movable.location.y) == round(character.location.y)) {
+                        character.die()
+                        return
+                    }
+                } else {
+                    // check floor
+                    if(floor(movable.location.x) == floor(character.location.x) && floor(movable.location.y) == floor(character.location.y)) {
+                        character.die()
+                        return
+                    }
                 }
             }
         }
         if(character is iAgent && nextCharacter is iScoreBoost) {
             character.level?.session?.setScore(score: (character.level?.session?.score)! + 3000)
+            nextCharacter?.costume = " "
         }
         if(character is iAgent && nextCharacter is iDirector) {
+            nextCharacter?.costume = " "
             character.levelComplete()
             return
         }

@@ -61,8 +61,8 @@ public class iLevel {
         self.load()
     }
     
-    func repaint() {
-        session?.repaint()
+    func repaint(lock: Bool) {
+        session?.repaint(useLock: lock)
     }
     
     func finished() {
@@ -132,8 +132,11 @@ public class iLevel {
     }
     
     func draw(rect : CGRect) {
-        let costumeToDraw = NSString.init(string: self.contents)
-        costumeToDraw.draw(at: CGPoint(x:0, y:0), withAttributes: fontAttributes)
+        for array in matrix! {
+            for character in array {
+                character.draw(rect: rect)
+            }
+        }
         for character in environment.characters {
             character.draw(rect: rect)
         }
