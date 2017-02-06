@@ -33,8 +33,7 @@
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleNewGamePressed:" destination="uHC-KT-JC3" eventType="touchUpInside" id="KFq-sx-VCe"/>
-                                    <segue destination="F7D-km-B0s" kind="show" id="6l0-s0-67i"/>
+                                    <action selector="handleNewGamePressed:" destination="uHC-KT-JC3" eventType="primaryActionTriggered" id="TRb-O7-f4x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-Ad-WWT">
@@ -105,21 +104,21 @@
                                     <constraint firstAttribute="width" constant="1679" id="xzz-uY-x5v"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ENH-C1-fLP">
-                                    <size key="itemSize" width="338" height="149"/>
+                                    <size key="itemSize" width="465" height="149"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LevelButton" id="RmQ-e4-fwG" customClass="LevelCell" customModule="iLadderTV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="338" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="465" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="338" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="465" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqj-bM-irK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="338" height="149"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="465" height="149"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -245,21 +244,21 @@
                                     <constraint firstAttribute="width" constant="1679" id="wAm-Xl-Hej"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hyi-pi-G3c">
-                                    <size key="itemSize" width="338" height="149"/>
+                                    <size key="itemSize" width="465" height="149"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LevelCell" id="31N-1y-57O" customClass="LevelCell" customModule="iLadderTV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="338" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="465" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="338" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="465" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuW-yK-itj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="338" height="149"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="465" height="149"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -322,7 +321,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DJd-80-hn6"/>
         <segue reference="sjN-68-A7C"/>
     </inferredMetricsTieBreakers>
 </document>

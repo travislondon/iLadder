@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E109A741E48185B0066F7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D67471E33A208003E15DE /* Assets.xcassets */; };
+		7E109A7D1E484E100066F7FB /* TitleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E109A7B1E484E000066F7FB /* TitleScreenController.swift */; };
 		7E1585901E36332000E2467A /* iLevelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E15858F1E36331F00E2467A /* iLevelSet.swift */; };
 		7E2EEB871E35AAE3008D23E1 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EEB861E35AAE3008D23E1 /* DataUtil.swift */; };
 		7E3103071E3F8924000E8E19 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3103061E3F8924000E8E19 /* Point.swift */; };
@@ -118,7 +119,6 @@
 		7EC120E91E46DF9400F6D9C6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D67441E33A208003E15DE /* Actions.sks */; };
 		7EC120EA1E46DF9400F6D9C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D67451E33A208003E15DE /* GameScene.sks */; };
 		7EC120EB1E46DF9400F6D9C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D67461E33A208003E15DE /* GameScene.swift */; };
-		7EC120EC1E46DF9400F6D9C6 /* TitleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE1E4A1E33ADE500E5034D /* TitleScreenController.swift */; };
 		7EC120ED1E46DF9400F6D9C6 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7E74211F1E33AF230036D743 /* TitleScene.sks */; };
 		7EC120EE1E46DF9400F6D9C6 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7421211E33AFF90036D743 /* TitleScene.swift */; };
 		7EC120F21E46DF9400F6D9C6 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3409151E3652E800606BFF /* GameManager.swift */; };
@@ -182,6 +182,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E109A7B1E484E000066F7FB /* TitleScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScreenController.swift; sourceTree = "<group>"; };
 		7E15858F1E36331F00E2467A /* iLevelSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iLevelSet.swift; sourceTree = "<group>"; };
 		7E2EEB861E35AAE3008D23E1 /* DataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
 		7E3103061E3F8924000E8E19 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
@@ -376,6 +377,7 @@
 				7EC120F71E46F6AC00F6D9C6 /* LevelSetViewController.swift */,
 				7EC120F91E46F79400F6D9C6 /* LevelCell.swift */,
 				7EC120FB1E46F7D800F6D9C6 /* LevelViewController.swift */,
+				7E109A7B1E484E000066F7FB /* TitleScreenController.swift */,
 			);
 			name = iLadderTV;
 			path = "iLadder TV";
@@ -688,7 +690,6 @@
 				7EC120DD1E46DF7100F6D9C6 /* Direction.swift in Sources */,
 				7EC120B51E46DF6800F6D9C6 /* AppDelegate.swift in Sources */,
 				7EC120CE1E46DF7100F6D9C6 /* iInteractiveCharacter.swift in Sources */,
-				7EC120EC1E46DF9400F6D9C6 /* TitleScreenController.swift in Sources */,
 				7EC120CD1E46DF7100F6D9C6 /* iEnemy.swift in Sources */,
 				7EC120E41E46DF7600F6D9C6 /* iLevel.swift in Sources */,
 				7EC120FD1E46F7DD00F6D9C6 /* LevelSetViewController.swift in Sources */,
@@ -697,6 +698,7 @@
 				7EC120C91E46DF7100F6D9C6 /* iInstructable.swift in Sources */,
 				7EC120E61E46DF8700F6D9C6 /* DataUtil.swift in Sources */,
 				7EC120DC1E46DF7100F6D9C6 /* iFalseFloor.swift in Sources */,
+				7E109A7D1E484E100066F7FB /* TitleScreenController.swift in Sources */,
 				7EC120F21E46DF9400F6D9C6 /* GameManager.swift in Sources */,
 				7EC120DF1E46DF7100F6D9C6 /* iSpike.swift in Sources */,
 				7EC120D41E46DF7100F6D9C6 /* iScoreBoost.swift in Sources */,

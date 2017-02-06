@@ -40,7 +40,7 @@ public class iLevel {
         environment.setLevel(level: self)
         var fontSize = 12
         #if os(tvOS)
-            fontSize = 16
+            fontSize = 24
         #endif
         let font = UIFont.init(name:"Menlo", size:CGFloat(fontSize))!
         fontAttributes = [NSFontAttributeName: (font)]
