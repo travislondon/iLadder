@@ -20,4 +20,8 @@ public class GameView : UIView {
        game.draw(rect: rect)
     }
     
+    override public var canBecomeFocused : Bool {
+        return true
+    }
+    
 }

@@ -38,7 +38,7 @@ public class GameViewController: UIViewController {
         gameView?.setGame(game: game!)
         game!.view = gameView
     }
-
+    #if os(iOS)
     override public var shouldAutorotate: Bool {
         return true
     }
@@ -46,15 +46,17 @@ public class GameViewController: UIViewController {
     override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
     }
-
+    #endif
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
 
+    #if os(iOS)
     override public var prefersStatusBarHidden: Bool {
         return true
     }
+    #endif
     
     override public func viewDidDisappear(_ animated: Bool) {
         game!.gameOver()
@@ -70,7 +72,9 @@ public class GameViewController: UIViewController {
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touchEnd = touches.first?.location(in: view)
-        if(touchStart == touchEnd) {
+        let xDiff = touchStart.x - (touchEnd?.x)!
+        let yDiff = touchStart.y - (touchEnd?.y)!
+        if(abs(xDiff) < 5 && abs(yDiff) < 5) {
             // if the duration is longer than 1 second, generate
             // a stop
             let duration = NSDate().timeIntervalSince(touchDate! as Date)

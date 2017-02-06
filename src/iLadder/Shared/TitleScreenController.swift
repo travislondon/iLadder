@@ -53,6 +53,7 @@ public class TitleScreenController : UIViewController {
        TitleScreenController.levelSets = iLevelSet.getLevelSets()!
     }
     
+    #if os(iOS)
     override public var shouldAutorotate: Bool {
         return true
     }
@@ -61,13 +62,16 @@ public class TitleScreenController : UIViewController {
         return .landscape
     }
     
+    #endif
+    
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-    
+    #if os(iOS)
     override public var prefersStatusBarHidden: Bool {
         return true
     }
+    #endif
 
 }

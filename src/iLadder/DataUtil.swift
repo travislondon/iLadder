@@ -11,6 +11,9 @@ import Foundation
 public class DataUtil {
     public static func getResourcePath(subfolder : String, local: Bool) -> String {
         var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)[0]
+        #if os(tvOS)
+        filePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .allDomainsMask, true)[0]
+        #endif
         if(local) {
             filePath = Bundle.main.bundlePath
         }

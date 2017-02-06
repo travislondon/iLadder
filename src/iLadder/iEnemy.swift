@@ -29,6 +29,8 @@ public class iEnemy : iMovableCharacter {
         // currently everything but whitespace is
         // an obstacle
         // look underneath
+        // ignore if on a ladder, only up or down
+        // in that case
         if(direction != Direction.Left && direction != Direction.Right) {
             // go either left or right
             if(randomNumber < 50) {
@@ -65,7 +67,10 @@ public class iEnemy : iMovableCharacter {
     }
     
     override public func die() {
-        level?.environment.characters.remove(at: (level?.environment.characters.index(of: self as iMovableCharacter))!)
+        let index = level?.environment.characters.index(of: self as iMovableCharacter)
+        if(index != nil) {
+            level?.environment.characters.remove(at: index!)
+        }
         base?.enemyRemoved()
     }
     

@@ -10,6 +10,7 @@ import SpriteKit
 
 public class LevelSetViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var levelSetCollectionView: UICollectionView!
+
     public var transitionToLevelPage = true
     public var data = TitleScreenController.levelSets
     
@@ -18,31 +19,41 @@ public class LevelSetViewController : UIViewController, UICollectionViewDataSour
         levelSetCollectionView.delegate = self
     }
     
+    
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     public func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
+                               numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
     
     public func collectionView(_ collectionView: UICollectionView,
-                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                               cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LevelButton",
-                                                      for: indexPath)
+                                                          for: indexPath)
         let button =  (cell as? LevelCell)?.cellButton
         button?.setTitle(data[indexPath.item].name, for: UIControlState.normal)
-        button?.addTarget(self, action: #selector(buttonPressed), for: UIControlEvents.touchUpInside)
-
+        button?.addTarget(self, action: #selector(buttonPressed), for: UIControlEvents.primaryActionTriggered)
+        
         // Configure the cell
         return cell
     }
-    
+
     public func collectionView(_: UICollectionView, canFocusItemAt: IndexPath) -> Bool {
+        return false
+    }
+    
+    public func collectionView(_: UICollectionView, shouldUpdateFocusIn: UICollectionViewFocusUpdateContext) -> Bool {
         return true
     }
-
+    
+    
+    public func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     func buttonPressed(sender: UIButton) {
         let setName = sender.titleLabel?.text
         var set : iLevelSet? = nil
@@ -51,7 +62,7 @@ public class LevelSetViewController : UIViewController, UICollectionViewDataSour
                 set = s
             }
         }
-         if(transitionToLevelPage) {
+        if(transitionToLevelPage) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "LevelViewController") as? LevelViewController
             controller?.levelSet = iLevelSet.getLevelSet(name: setName!)

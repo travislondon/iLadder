@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  iLadder
+//  iLadder TV
 //
-//  Created by Travis London on 1/21/17.
+//  Created by Travis London on 2/4/17.
 //  Copyright © 2017 Travis London. All rights reserved.
 //
 
