@@ -32,16 +32,17 @@ public class iLevel {
     var initialized = false
     var bounds = CGRect(x:0, y:0, width: 0, height:0)
     var floorLevels = Array<Int>()
+    var fontSize = 12
 
     init(name : String, contents: String) {
         self.name = name
         self.contents = contents
         self.originalContents = contents
         environment.setLevel(level: self)
-        var fontSize = 12
-        #if os(tvOS)
-            fontSize = 24
-        #endif
+        setFont()
+    }
+    
+    func setFont() {
         let font = UIFont.init(name:"Menlo", size:CGFloat(fontSize))!
         fontAttributes = [NSFontAttributeName: (font)]
         let myText = "H"

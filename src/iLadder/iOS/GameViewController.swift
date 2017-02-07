@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-public class GameViewController: UIViewController {
+public class GameViewController: UIViewController, UIScrollViewDelegate {
     
     var game : Game?
     
@@ -35,9 +35,10 @@ public class GameViewController: UIViewController {
         
         // configure the game view area
         let gameView = self.view.viewWithTag(3) as? GameView
-        gameView?.setGame(game: game!)
         game!.view = gameView
+        gameView?.setGame(game: game!)
     }
+    
     #if os(iOS)
     override public var shouldAutorotate: Bool {
         return true

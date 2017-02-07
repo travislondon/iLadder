@@ -62,7 +62,7 @@ public class LevelViewController : UIViewController, UICollectionViewDataSource,
         let levelName = sender.titleLabel?.text
         var game = GameManager.getManager().getGame(name: levelName!)
         if(game == nil) {
-            game = iLadderSession(name: levelName!, view: view)
+            game = iLadderSession(name: levelName!)
             (game as! iLadderSession).levelSet = levelSet
             _ = (game as! iLadderSession).setLevel(newLevel: (levelSet?.getLevel(index: (levelSet?.indexOf(name: levelName!))!))!)
             (game as! iLadderSession).startSession()

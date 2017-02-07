@@ -27,11 +27,11 @@
             condition = "character is iEnemy"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "draw(rect:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -59,11 +59,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -75,11 +75,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507952956.860732"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
@@ -91,11 +91,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507880819.668641"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
@@ -428,11 +428,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "finished()"
             landmarkType = "7">
          </BreakpointContent>
@@ -444,11 +444,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507957486.781163"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "updateLifeLabel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -460,11 +460,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507957486.781163"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "updateLifeLabel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -508,11 +508,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "handleEvent(event:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -588,11 +588,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "unload()"
             landmarkType = "7">
          </BreakpointContent>
@@ -636,11 +636,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507952956.860732"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
@@ -652,11 +652,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "draw(rect:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -668,13 +668,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507880819.668641"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "run()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iLadderTV.iLadderSession.run () -&gt; ()"
+                  moduleName = "iLadderTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/travislondon/engineering/repositories/iLadder/src/iLadder/iLadderSession.swift"
+                  timestampString = "508119711.548082"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "243">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iLadderTV.iLadderSession.(run () -&gt; ()).(closure #1)"
+                  moduleName = "iLadderTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/travislondon/engineering/repositories/iLadder/src/iLadder/iLadderSession.swift"
+                  timestampString = "508119711.549356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -684,11 +716,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507880819.668641"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "run()"
             landmarkType = "7">
             <Locations>
@@ -732,11 +764,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -795,11 +827,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "iLevel"
             landmarkType = "3">
          </BreakpointContent>
@@ -811,11 +843,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "iLevel"
             landmarkType = "3">
          </BreakpointContent>
@@ -827,11 +859,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "iLevel"
             landmarkType = "3">
          </BreakpointContent>
@@ -843,11 +875,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "iLevel"
             landmarkType = "3">
          </BreakpointContent>
@@ -964,11 +996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "load()"
             landmarkType = "7">
          </BreakpointContent>
@@ -980,11 +1012,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507880819.668641"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1091,11 +1123,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "load()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1107,12 +1139,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507880819.668641"
+            timestampString = "508119539.353672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "init(name:view:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "init(name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1171,11 +1203,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "load()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1187,11 +1219,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLadderSession.swift"
-            timestampString = "507953000.940357"
+            timestampString = "508119587.646293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1235,11 +1267,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "load()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1251,11 +1283,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "load()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1571,11 +1603,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "draw(rect:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2051,11 +2083,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS/GameViewController.swift"
-            timestampString = "508007686.224466"
+            timestampString = "508120357.524918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "touchesEnded(_:with:)"
             landmarkType = "7">
             <Locations>
@@ -2099,11 +2131,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS/GameViewController.swift"
-            timestampString = "508007686.224466"
+            timestampString = "508120357.524918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "touchesEnded(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2163,11 +2195,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iLevel.swift"
-            timestampString = "508001858.88103"
+            timestampString = "508120597.649777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2371,11 +2403,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS/GameViewController.swift"
-            timestampString = "508007686.224466"
+            timestampString = "508120357.524918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "touchesEnded(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2387,11 +2419,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS/GameViewController.swift"
-            timestampString = "508007686.224466"
+            timestampString = "508120357.524918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "touchesEnded(_:with:)"
             landmarkType = "7">
             <Locations>
@@ -2441,6 +2473,22 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "handleNewGamePressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iLadderSession.swift"
+            timestampString = "508119576.398823"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

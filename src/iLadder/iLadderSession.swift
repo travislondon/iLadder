@@ -22,9 +22,10 @@ public class iLadderSession : Game {
     public var over = false
     public var controller : GameViewController?
     public var lock = UnfairLock.init()
+    var calculatedScale = false
     
-    override init(name : String, view : UIView) {
-        super.init(name: name, view: view)
+    override init(name : String) {
+        super.init(name: name)
         self.sessionName = name + ":" + String(name.hash)
         self.initializeSession()
     }
@@ -39,6 +40,14 @@ public class iLadderSession : Game {
     
     func run() {
         while(!self.over) {
+            // skip unit view is loaded
+            if(view == nil) {
+                continue
+            }
+            if(!calculatedScale) {
+                adjustScaling()
+                calculatedScale = true
+            }
             // we must lock updating
             // to prevent processing before
             // a last update was made
@@ -108,6 +117,18 @@ public class iLadderSession : Game {
     func setLevel(newLevel : iLevel) {
         currentLevel = newLevel
         currentLevel?.session = self
+        calculatedScale = false
+    }
+    
+    func adjustScaling() {
+        var ratio = (view?.frame.width)! / ((currentLevel?.bounds.width)! * (currentLevel?.letterWidth)!)
+        let yRatio = (view?.frame.height)! / ((currentLevel?.bounds.height)! * (currentLevel?.letterHeight)!)
+        if(ratio > yRatio) {
+            ratio = yRatio
+        }
+        // scale the font size to maximize screen real estate
+        currentLevel?.fontSize = Int(CGFloat((currentLevel?.fontSize)!) * ratio)
+        currentLevel?.setFont()
     }
     
     func setLifeLabel(label : UILabel) {

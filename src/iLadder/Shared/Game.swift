@@ -11,16 +11,16 @@ import SpriteKit
 public class Game : Equatable {
     var isRunning = false
     var name = ""
-    var view : UIView?
+    var view : GameView?
     var rectToDraw : [CGRect]
     var livesLabel : UILabel?
     static var lastControl = 0
     
-    public init(name : String, view : UIView) {
+    public init(name : String) {
         isRunning = true
         self.name = name
-        self.view = view
-        rectToDraw = [view.frame]
+        self.view = nil
+        self.rectToDraw = [CGRect()]
     }
     
     public func draw(rect : CGRect) {
