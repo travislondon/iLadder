@@ -8,16 +8,12 @@
 
 import SpriteKit
 
-public class GameView : UIScrollView {
+public class GameView : UIView {
     
     var game : Game!
     
     public func setGame(game: Game) {
         self.game = game
-    }
-    
-    public func adjustScaling(scale: CGFloat) {
-        self.setZoomScale(scale, animated: false)
     }
     
     override public func draw(_ rect: CGRect) {

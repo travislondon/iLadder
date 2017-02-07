@@ -22,8 +22,8 @@ public class iLadderSession : Game {
     public var over = false
     public var controller : GameViewController?
     public var lock = UnfairLock.init()
-    var lastViewFrame = CGRect()
-    
+    var lastViewFrameSize = CGSize()
+        
     override init(name : String) {
         super.init(name: name)
         self.sessionName = name + ":" + String(name.hash)
@@ -44,10 +44,9 @@ public class iLadderSession : Game {
             if(view == nil) {
                 continue
             }
-            if(lastViewFrame != view?.frame) {
-                adjustScaling()
-                lastViewFrame = (view?.frame)!
-            }
+            
+            adjustScaling()
+            
             // we must lock updating
             // to prevent processing before
             // a last update was made

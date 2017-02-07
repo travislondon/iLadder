@@ -518,14 +518,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="436" id="Uvf-eu-UlQ"/>
                                 </constraints>
-                                <mutableString key="text">Controls:
+                                <string key="text">Controls:
 
 Swipe Right - Begin moving in the right direction
  Swipe Left - Begin moving in the left direction  Swipe Down - Proceed in previous direction and move down on the next available ladder
 
 Swipe Up - Proceed in previous direction and move up on the next available ladder
 
-Touch Release - Perform a jump</mutableString>
+Touch Release - Perform a jump</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -560,7 +560,7 @@ Touch Release - Perform a jump</mutableString>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p59-Kk-noL"/>
-        <segue reference="NKK-sr-yKr"/>
+        <segue reference="KoP-IN-zYX"/>
         <segue reference="ei7-TK-ycU"/>
     </inferredMetricsTieBreakers>
 </document>

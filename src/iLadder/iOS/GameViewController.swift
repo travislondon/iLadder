@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-public class GameViewController: UIViewController, UIScrollViewDelegate {
+public class GameViewController: UIViewController {
     
     var game : Game?
     
