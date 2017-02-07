@@ -10,6 +10,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="7Cx-er-rkt">
+            <objects>
+                <viewController id="r6q-sb-Q99" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wP1-7s-2bF"/>
+                        <viewControllerLayoutGuide type="bottom" id="LLj-Yb-NlN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D66-to-jej">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-R4-WnR">
+                                <rect key="frame" x="502" y="102" width="917" height="641"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="917" id="Se3-F8-oki"/>
+                                </constraints>
+                                <mutableString key="text">Controls:
+
+Swipe Right - Begin moving in the right direction
+ Swipe Left - Begin moving in the left direction  Swipe Down - Proceed in previous direction and move down on the next available ladder
+
+Swipe Up - Proceed in previous direction and move up on the next available ladder
+
+Touch Release - Perform a jump</mutableString>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxO-fH-kvU">
+                                <rect key="frame" x="861" y="818" width="199" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="44P-xZ-HZd"/>
+                                    <constraint firstAttribute="height" constant="140" id="zG5-1t-XYa"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" image="go-home"/>
+                                <connections>
+                                    <segue destination="uHC-KT-JC3" kind="show" id="GeN-6S-IsK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LLj-Yb-NlN" firstAttribute="top" secondItem="VxO-fH-kvU" secondAttribute="bottom" constant="122" id="7xM-e2-jZe"/>
+                            <constraint firstItem="D8g-R4-WnR" firstAttribute="centerX" secondItem="VxO-fH-kvU" secondAttribute="centerX" id="9YA-GY-Zql"/>
+                            <constraint firstItem="D8g-R4-WnR" firstAttribute="top" secondItem="wP1-7s-2bF" secondAttribute="bottom" constant="102" id="NEx-fK-9Le"/>
+                            <constraint firstItem="D8g-R4-WnR" firstAttribute="centerX" secondItem="D66-to-jej" secondAttribute="centerX" id="PTw-s5-pln"/>
+                            <constraint firstItem="VxO-fH-kvU" firstAttribute="top" secondItem="D8g-R4-WnR" secondAttribute="bottom" constant="75" id="x46-Ui-wJc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzy-c3-TgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="-2551"/>
+        </scene>
         <!--Title Screen Controller-->
         <scene sceneID="IVZ-Nj-cCX">
             <objects>
@@ -64,12 +119,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ls-th-CLQ">
+                                <rect key="frame" x="863" y="919" width="195" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="Ylg-jM-UUk"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="r6q-sb-Q99" kind="show" id="iAf-rs-uH2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="K2g-cj-Xix" firstAttribute="leading" secondItem="czQ-Ad-WWT" secondAttribute="leading" id="8kQ-ae-15q"/>
+                            <constraint firstItem="0ls-th-CLQ" firstAttribute="top" secondItem="czQ-Ad-WWT" secondAttribute="bottom" constant="54" id="DPW-Al-Grt"/>
                             <constraint firstItem="jeh-rR-vZ2" firstAttribute="top" secondItem="czQ-Ad-WWT" secondAttribute="bottom" constant="215" id="Dc9-xp-H0Q"/>
                             <constraint firstItem="czQ-Ad-WWT" firstAttribute="top" secondItem="K2g-cj-Xix" secondAttribute="bottom" constant="44" id="cD4-SF-gZZ"/>
+                            <constraint firstItem="jeh-rR-vZ2" firstAttribute="top" secondItem="0ls-th-CLQ" secondAttribute="bottom" constant="103" id="oUi-5d-bTh"/>
+                            <constraint firstItem="0ls-th-CLQ" firstAttribute="centerX" secondItem="czQ-Ad-WWT" secondAttribute="centerX" id="ofZ-0e-XYl"/>
                             <constraint firstItem="K2g-cj-Xix" firstAttribute="centerX" secondItem="czQ-Ad-WWT" secondAttribute="centerX" id="ppN-iI-s8b"/>
                             <constraint firstItem="Dv3-a8-pUu" firstAttribute="centerX" secondItem="hQn-SD-kq2" secondAttribute="centerX" id="q0H-HY-rW6"/>
                             <constraint firstItem="Dv3-a8-pUu" firstAttribute="centerX" secondItem="K2g-cj-Xix" secondAttribute="centerX" id="tee-JA-Uvi"/>
@@ -320,7 +391,10 @@
             <point key="canvasLocation" x="2380" y="704"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="go-home" width="72" height="72"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sjN-68-A7C"/>
+        <segue reference="GeN-6S-IsK"/>
     </inferredMetricsTieBreakers>
 </document>
