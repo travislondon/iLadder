@@ -32,18 +32,16 @@ public class iLevel {
     var initialized = false
     var bounds = CGRect(x:0, y:0, width: 0, height:0)
     var floorLevels = Array<Int>()
-    var fontSize = 12
+    var fontSize = CGFloat(100)
 
     init(name : String, contents: String) {
         self.name = name
         self.contents = contents
         self.originalContents = contents
         environment.setLevel(level: self)
-        setFont()
     }
     
-    func setFont() {
-        let font = UIFont.init(name:"Menlo", size:CGFloat(fontSize))!
+    func setFont(font: UIFont) {
         fontAttributes = [NSFontAttributeName: (font)]
         let myText = "H"
         let size = (myText as NSString).size(attributes: fontAttributes)
@@ -93,7 +91,7 @@ public class iLevel {
             let characters = line.characters
             var xarray = Array<iLadderCharacter>()
             for char in characters {
-                if(CGFloat(x) * letterWidth > CGFloat(width)) {
+                if(x > width) {
                     width = x
                 }
                 let character = iLadderCharacterFactory.createCharacter(character: char, level: self)

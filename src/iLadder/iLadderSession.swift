@@ -22,7 +22,7 @@ public class iLadderSession : Game {
     public var over = false
     public var controller : GameViewController?
     public var lock = UnfairLock.init()
-    var calculatedScale = false
+    var lastViewFrame = CGRect()
     
     override init(name : String) {
         super.init(name: name)
@@ -44,9 +44,9 @@ public class iLadderSession : Game {
             if(view == nil) {
                 continue
             }
-            if(!calculatedScale) {
+            if(lastViewFrame != view?.frame) {
                 adjustScaling()
-                calculatedScale = true
+                lastViewFrame = (view?.frame)!
             }
             // we must lock updating
             // to prevent processing before
@@ -117,18 +117,32 @@ public class iLadderSession : Game {
     func setLevel(newLevel : iLevel) {
         currentLevel = newLevel
         currentLevel?.session = self
-        calculatedScale = false
     }
     
     func adjustScaling() {
-        var ratio = (view?.frame.width)! / ((currentLevel?.bounds.width)! * (currentLevel?.letterWidth)!)
-        let yRatio = (view?.frame.height)! / ((currentLevel?.bounds.height)! * (currentLevel?.letterHeight)!)
-        if(ratio > yRatio) {
-            ratio = yRatio
-        }
+        let width = view?.frame.width
+        let height = view?.frame.height
+        let maxX = width! / (currentLevel?.bounds.width)!
+        let maxY = height! / (currentLevel?.bounds.height)!
         // scale the font size to maximize screen real estate
-        currentLevel?.fontSize = Int(CGFloat((currentLevel?.fontSize)!) * ratio)
-        currentLevel?.setFont()
+        let font = getOptimalFont(maxX: maxX, maxY: maxY)
+        currentLevel?.setFont(font: font)
+    }
+    
+    func getOptimalFont(maxX: CGFloat, maxY:CGFloat) -> UIFont {
+        var currentSize = CGFloat(60)
+        var font = UIFont(name: "Menlo", size: currentSize)
+        while(currentSize > 1) {
+            font = UIFont(name: "Menlo", size: currentSize)
+            let fontAttributes = [NSFontAttributeName: (font)]
+            let myText = "H"
+            let size = (myText as NSString).size(attributes: fontAttributes)
+            if(maxX > size.width && maxY > size.height) {
+                break
+            }
+            currentSize -= 0.5
+        }
+        return font!
     }
     
     func setLifeLabel(label : UILabel) {
