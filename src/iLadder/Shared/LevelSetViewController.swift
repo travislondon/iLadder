@@ -62,10 +62,7 @@ public class LevelSetViewController : UIViewController, UICollectionViewDataSour
                 game = iLadderSession(name: (data[0].name))
                 (game as! iLadderSession).levelSet = data[0]
                 _ = (game as! iLadderSession).setLevel(newLevel: (set?.getLevel(index: 0))!)
-                (game as! iLadderSession).startSession()
                 GameManager.getManager().addGame(game: game!)
-            } else {
-                (game as! iLadderSession).startSession()
             }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController

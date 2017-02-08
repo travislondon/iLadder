@@ -65,10 +65,7 @@ public class LevelViewController : UIViewController, UICollectionViewDataSource,
             game = iLadderSession(name: levelName!)
             (game as! iLadderSession).levelSet = levelSet
             _ = (game as! iLadderSession).setLevel(newLevel: (levelSet?.getLevel(index: (levelSet?.indexOf(name: levelName!))!))!)
-            (game as! iLadderSession).startSession()
             GameManager.getManager().addGame(game: game!)
-        } else {
-            (game as! iLadderSession).startSession()
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController

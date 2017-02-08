@@ -559,8 +559,8 @@ Touch Release - Perform a jump</string>
         <image name="go-home-ios" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="NKK-sr-yKr"/>
         <segue reference="p59-Kk-noL"/>
-        <segue reference="KoP-IN-zYX"/>
         <segue reference="ei7-TK-ycU"/>
     </inferredMetricsTieBreakers>
 </document>

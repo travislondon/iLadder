@@ -12,7 +12,11 @@ import SpriteKit
     // <rdar://problem/26756207> SKColor typealias does not seem to be exposed on watchOS SpriteKit
     typealias SKColor = UIColor
 #endif
+
 class GameScene: SKScene {
+    
+    var controller : GameViewController?
+    
     class func newGameScene() -> GameScene {
         // Load 'GameScene.sks' as an SKScene.
         guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else {
@@ -39,8 +43,16 @@ class GameScene: SKScene {
     }
     #endif
     
+    var lastDraw = 0.0
     override func update(_ currentTime: TimeInterval) {
-
+        if(lastDraw == 0.0) {
+            lastDraw = currentTime
+        }
+        if(currentTime - lastDraw > 0.07) {
+            ((controller?.game) as! iLadderSession).run()
+            controller?.game?.view?.setNeedsDisplay()
+            lastDraw = currentTime
+        }
     }
     
 }

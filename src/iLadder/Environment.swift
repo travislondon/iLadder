@@ -112,11 +112,11 @@ public class Environment {
                 if(level?.floorLevels.contains(Int(character.location.y)))! {
                    //character.direction = Direction.Down
                 }
-                character.location.y += 0.5
+                character.location.y += 1
                 // check obstacles, in the down direction if moving
                 if(character.moving) {
                     nextCharacter = level?.characterAt(x: round(character.location.x), y: round(character.location.y))
-                    if(!(nextCharacter is iFloor)) {
+                    if(!(nextCharacter is iFloor) || !(nextCharacter is iDisappearingFloor)) {
                         nextCharacter = level?.characterAt(x: floor(character.location.x), y: floor(character.location.y))
                     }
                     checkObstacles(character: character, nextCharacter: nextCharacter)
@@ -226,7 +226,10 @@ public class Environment {
 //        }
         let characterBelow = level?.characterAt(x: round(character.location.x), y: round(character.location.y) + 1)
         if(characterBelow is iDisappearingFloor) {
-            characterBelow?.costume = " "
+            if(character.costume != " ") {
+                character.location.y = character.location.y - 1
+                characterBelow?.costume = " "
+            }
         }
     }
     
@@ -239,21 +242,14 @@ public class Environment {
     }
     
     func handleLadder(character: iMovableCharacter, nextCharacter: iLadderCharacter?, previousLocation : CGPoint) {
-        // adjust for correct ladder placement
-        if(character.direction == Direction.Right) {
-            character.location.x += 0.5
-        }
-        if(character.direction == Direction.Left) {
-            character.location.x -= 0.5
-        }
-//        let previousCharacter = level?.characterAt(x: previousLocation.x, y: previousLocation.y)
-//        let charBelow = level?.characterAt(x: round(character.location.x), y: round(character.location.y) + 1)
-//        let charAbove = level?.characterAt(x: floor(character.location.x), y: floor(character.location.y) - 1)
-//        if((charBelow is iLadder && previousCharacter?.costume == " ") && (charAbove is iLadder && previousCharacter?.costume == " ")) {
-//            // pause on ladder
-//            character.direction = Direction.None
-//            character.moving = false
-//        } else {
+        let previousCharacter = level?.characterAt(x: previousLocation.x, y: previousLocation.y)
+        let charBelow = level?.characterAt(x: round(character.location.x), y: round(character.location.y) + 1)
+        let charAbove = level?.characterAt(x: floor(character.location.x), y: floor(character.location.y) - 1)
+        if((charBelow is iLadder && previousCharacter?.costume == " ") && (charAbove is iLadder && previousCharacter?.costume == " ")) {
+            // pause on ladder
+            character.direction = Direction.None
+            character.moving = false
+        } else {
             if(character.upOnNextChance) {
                 character.direction = Direction.Up
                 character.upOnNextChance = false
@@ -262,7 +258,7 @@ public class Environment {
                 character.direction = Direction.Down
                 character.downOnNextChance = false
             }
-//        }
+        }
     }
     
     func handleLeftAttempt(character: iMovableCharacter, nextCharacter: iLadderCharacter?, previousLocation: CGPoint) {

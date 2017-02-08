@@ -35,7 +35,7 @@ Swipe Right - Begin moving in the right direction
 
 Swipe Up - Proceed in previous direction and move up on the next available ladder
 
-Touch Release - Perform a jump</mutableString>
+Press - Perform a jump</mutableString>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

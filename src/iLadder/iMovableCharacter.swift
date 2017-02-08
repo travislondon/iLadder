@@ -32,16 +32,16 @@ public class iMovableCharacter : iInteractiveCharacter, Hashable {
         if(moving) {
             switch direction {
             case .Up:
-                location.y -= CGFloat(0.5)
+                location.y -= CGFloat(1)
                 break
             case .Down:
-                location.y += CGFloat(0.5)
+                location.y += CGFloat(1)
                 break
             case .Left:
-                location.x -= CGFloat(0.5)
+                location.x -= CGFloat(1)
                 break
             case .Right:
-                location.x += CGFloat(0.5)
+                location.x += CGFloat(1)
                 break
             case .None:
                 moving = false
@@ -51,9 +51,9 @@ public class iMovableCharacter : iInteractiveCharacter, Hashable {
 
         // if in jump mode adjust height
         if(jumping) {
-            if(jumps < 8) {
-                if(jumps < 4) {
-                    location.y -= CGFloat(0.5)
+            if(jumps < 4) {
+                if(jumps < 2) {
+                    location.y -= CGFloat(1)
                 }
                 jumps += 1
                 moving = true
@@ -62,10 +62,6 @@ public class iMovableCharacter : iInteractiveCharacter, Hashable {
                 jumping = false
             }
         }
-    }
-    
-    override public func draw(rect: CGRect) {
-        super.draw(rect: rect)
     }
     
     public static func ==(lhs: iMovableCharacter, rhs: iMovableCharacter) -> Bool {

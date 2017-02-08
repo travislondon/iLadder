@@ -68,6 +68,7 @@ public class iLevel {
     }
     
     func finished() {
+        session?.pause()
         self.unload()
         var currentIndex = session?.levelSet?.indexOf(name: name)
         if(currentIndex! + 1 >= (session?.levelSet?.levelURLs.count)!) {
@@ -134,9 +135,12 @@ public class iLevel {
     }
     
     func draw(rect : CGRect) {
-        for array in matrix! {
-            for character in array {
-                character.draw(rect: rect)
+        if(session?.paused)! {
+            return
+        }
+        for y in matrix! {
+            for x in y {
+                x.draw(rect: rect)
             }
         }
         for character in environment.characters {

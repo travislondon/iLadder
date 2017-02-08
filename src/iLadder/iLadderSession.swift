@@ -18,16 +18,24 @@ public class iLadderSession : Game {
     private var levelLabel : UILabel?
     private var currentLevel : iLevel?
     public var lives = 3
-    private var paused = true
+    public var paused = true
     public var over = false
     public var controller : GameViewController?
     public var lock = UnfairLock.init()
+    public var gameStarted = false
     var lastViewFrameSize = CGSize()
         
     override init(name : String) {
         super.init(name: name)
         self.sessionName = name + ":" + String(name.hash)
         self.initializeSession()
+    }
+    
+    override public func startGame() {
+        if(!gameStarted) {
+            gameStarted = true
+            startSession()
+        }
     }
     
     func startSession() {
@@ -39,31 +47,14 @@ public class iLadderSession : Game {
     }
     
     func run() {
-        while(!self.over) {
-            // skip unit view is loaded
-            if(view == nil) {
-                continue
-            }
-            
-            adjustScaling()
-            
-            // we must lock updating
-            // to prevent processing before
-            // a last update was made
-            lock.sync(execute: {
-                currentLevel?.startEnemyCreation()
-                currentLevel?.update()
-            })
-            repaint(useLock: true)
-            Thread.sleep(forTimeInterval: 0.002)
-        }
+        adjustScaling()
+        currentLevel?.startEnemyCreation()
+        currentLevel?.update()
     }
     
     func repaint(useLock: Bool) {
-        DispatchQueue.main.async {
-            self.updateLifeLabel()
-            self.view?.setNeedsDisplay()
-        }
+        self.updateLifeLabel()
+        self.view?.setNeedsDisplay()
     }
     
     override public func gameOver() {
@@ -116,6 +107,7 @@ public class iLadderSession : Game {
     func setLevel(newLevel : iLevel) {
         currentLevel = newLevel
         currentLevel?.session = self
+        unpause()
     }
     
     func adjustScaling() {

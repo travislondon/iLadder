@@ -41,4 +41,7 @@ public class Game : Equatable {
         // let subtypes override
     }
     
+    public func startGame() {
+        // let subtypes override
+    }
 }

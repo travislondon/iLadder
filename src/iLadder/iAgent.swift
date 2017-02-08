@@ -11,6 +11,8 @@ import SpriteKit
 public class iAgent : iMovableCharacter {
     
     var dead = false
+    var dieing = false
+    var levelCompleting = false
     
     override public func handleEvent(event: TouchEvent, sender: iLevel) {
         if(dead) {
@@ -107,33 +109,55 @@ public class iAgent : iMovableCharacter {
             return Direction.None
         }
     }
-
-    override public func levelComplete() {
-        let chars = [" ", "o", "O", "0", "o", "O", "0","o", "O", "0","o", "O", "0"]
-        for char in chars {
-            self.costume = Character(char)
-            self.level?.repaint(lock: false)
-            usleep(100000)
+    
+    override public func draw(rect: CGRect) {
+        if(dieing) {
+            die()
         }
-        level?.finished()
+        if(levelCompleting) {
+            levelComplete()
+        }
+        super.draw(rect: rect)
+    }
+    
+    override public func levelComplete() {
+        // clear director
+        let director = level?.characterAt(x: location.x, y: location.y)
+        director?.costume = " "
+        if(levelCompleting) {
+            // sleep for a bit
+            Thread.sleep(forTimeInterval: 0.05)
+        }
+        levelCompleting = true
+        self.level?.repaint(lock: false)
+        moving = false
+        if(self.costume == "÷") {
+            level?.session?.pause()
+            level?.finished()
+            dieing = false
+        }
+        self.costume = "÷"
     }
     
     override public func die() {
+        if(dieing) {
+            // sleep for a bit
+            Thread.sleep(forTimeInterval: 0.05)
+        }
+        dieing = true
         dead = true
         moving = false
-        level?.session?.lives -= 1
         level?.session?.updateLifeLabel()
-        let chars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "x"]
-        for char in chars {
-            self.costume = Character(char)
-            usleep(100000)
-            self.level?.repaint(lock: false)
+        if(self.costume == "x") {
+            level?.session?.lives -= 1
+            if((level?.session?.lives)! <= 0) {
+                level?.session?.endSession()
+            } else {
+                level?.reset()
+            }
+            dieing = false
         }
-        if(level?.session?.lives == 0) {
-            level?.session?.endSession()
-        } else {
-            level?.reset()
-        }
+        self.costume = "x"
     }
     
 }

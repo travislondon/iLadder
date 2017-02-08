@@ -25,6 +25,8 @@ public class GameViewController: UIViewController {
         
         let scene = GameScene.newGameScene()
 
+        scene.controller = self
+        
         // Present the scene
         let skView = self.view as! SKView
         skView.presentScene(scene)
@@ -63,8 +65,25 @@ public class GameViewController: UIViewController {
         game!.gameOver()
     }
     
+    override public func viewDidLayoutSubviews() {
+        let gameView = self.view.viewWithTag(3) as? GameView
+        gameView?.game.startGame()
+    }
+    
     var touchStart = CGPoint(x:0, y:0)
     var touchDate : Date?
+    
+    override public func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        if(presses.first?.type == .playPause) {
+            let event = TouchEvent(type: TouchEvent.STOP)
+            self.game?.handleEvent(event: event)
+        }
+        if(presses.first?.type == UIPressType.select) {
+            // generate a press, causing a jump
+            let event = TouchEvent(type: TouchEvent.JUMP)
+            self.game?.handleEvent(event: event)
+        }
+    }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchStart = (touches.first?.location(in: view))!
@@ -75,7 +94,8 @@ public class GameViewController: UIViewController {
         let touchEnd = touches.first?.location(in: view)
         let xDiff = touchStart.x - (touchEnd?.x)!
         let yDiff = touchStart.y - (touchEnd?.y)!
-        if(abs(xDiff) < 5 && abs(yDiff) < 5) {
+        if((abs(xDiff) < 20 && abs(yDiff) < 20)) {
+            #if os(iOS)
             // if the duration is longer than 1 second, generate
             // a stop
             let duration = NSDate().timeIntervalSince(touchDate! as Date)
@@ -87,6 +107,7 @@ public class GameViewController: UIViewController {
                 let event = TouchEvent(type: TouchEvent.JUMP)
                 self.game?.handleEvent(event: event)
             }
+            #endif
         } else {
             // determine move direction and generate appropriate
             // event
