@@ -1,6 +1,8 @@
 # iLadder
 
-iLadder Community Levels
+Remember the KayPro II, maybe maybe not.  Ladder was a game created for the KayPro and with the machines limited capabilities the game was ASCII based.  This is an attempt to produce a similar game for iOS.  Only the main character is now an i, and the enemy and !.  Read below for information about how to contribute your own levels and play them (with the paid version).
+
+# iLadder Community Levels
 
 This repository hosts level sets created by the community.  These levels are accessible to the iLadder application.  To contribute your own levels follow the following simple steps.
 
