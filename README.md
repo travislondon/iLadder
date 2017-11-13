@@ -15,8 +15,7 @@ This repository hosts level sets created by the community.  These levels are acc
 3. Create your level file as a simple text file using the lvl file extension.
 4. See [Object Legend](https://github.com/travislondon/iLadder/blob/master/Game/ObjectLegend.md) for adding gaming content, adding items from this legend.
 5. Note the game will automatically zoom, so real estate is only a concern when the levels are to the extremes (very small or very large).
-6. Create a level description file (see the [Level configuration](https://github.com/travislondon/iLadder/blob/master/
-Levels/Community/Community.cfg) for details), currently this specifies the order of levels in the game.
+6. Create a level description file (see the [Level configuration](https://github.com/travislondon/iLadder/blob/master/Levels/Community/Community.cfg) for details), currently this specifies the order of levels in the game.
 7. Add a Level Set: <path to level> entry in the [root configuration](https://github.com/travislondon/iLadder/blob/master/Levels/LevelConfiguration.cfg) file.
 8. Create a pull request for addition to the game
   - Under the repository select the Pull Request tab
