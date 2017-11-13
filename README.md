@@ -6,7 +6,7 @@ Remember the KayPro II, maybe maybe not.  Ladder was a game created for the KayP
 
 This repository hosts level sets created by the community.  These levels are accessible to the iLadder application.  To contribute your own levels follow the following simple steps.
 
-1. Create a branch of the https://github.com/travislondon/iLadder/ repository
+1. Create a branch of the [repository](https://github.com/travislondon/iLadder)
   - On the repository site click the button titled: Branch: master
   - Enter a name for the branch <branch_name>
   - Select Create branch: <branch_name>
